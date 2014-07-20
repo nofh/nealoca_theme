@@ -38,22 +38,29 @@
   <div class="inner-wrap">
   
   <?php do_action('foundationPress_layout_start'); ?>
-  
+  <div id='entete_contact'>
+      <div class='row'>
+        <ul class='inline-list icon-contact right'>
+        <li><a href='<?php $page = get_page_by_path( 'contact' ) ; echo get_permalink( $page->ID );?>'><i class="fa fa-phone"><?php echo "   " . get_option( '_fw_tel_contact' )?></i></a></li>
+        <li><a href='<?php $page = get_page_by_path( 'contact' ) ; echo get_permalink( $page->ID );?>'><i class="fa fa-envelope"><?php echo "  " . get_option( '_fw_email_contact' );?></i></a></li>
+        </ul>
+      </div> 
+  </div>
   <nav class="tab-bar show-for-small-only">
+
     <section class="left-small">
       <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
     </section>
     <section class="middle tab-bar-section">
       
       <h1 class="title"><?php bloginfo( 'name' ); ?></h1>
-
     </section>
   </nav>
 
   <aside class="left-off-canvas-menu">
     <?php foundationPress_mobile_off_canvas(); ?>
   </aside>
-  
+
         <div class="top-bar-container contain-to-grid show-for-medium-up">
             <nav class="top-bar" data-topbar="">
                 <ul class="title-area">
