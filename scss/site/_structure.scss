@@ -26,6 +26,36 @@
 	margin-bottom: rem-calc(32);
 }
 
+// panel
+.panel
+{
+    margin-bottom: $panel_margin;
+}
+
+// panel callout
+.panel.callout
+{
+    border-color: $nl_gris;
+    background-color: $nl_gris;
+    margin: $panel_callout_margin;
+
+    h1, h2, h3, h4
+    {
+        color: $nl_bleu;
+    }
+
+    p
+    {
+        font-family: $panel_callout_font_family;
+        font-size: $panel_callout_font_size;
+        color: $nl_blanc_casse;
+    }
+}
+
+
+//
+$include-html-button-classes: $include-html-classes;
+$button-font-color: #444;
 
 /**
  * 2.0 Typography
@@ -40,7 +70,111 @@
  * ----------------------------------------------------------------------------
  */
 
-// Insert styles here
+
+// Header 
+
+#entete_contact
+{
+    background-image: $entete_contact_background_image;
+    background-position: $entete_contact_background_position;
+    background-repeat: $entete_contact_background_repeat;
+    background-color: $entete_contact_background_color;
+    height: $entete_contact_hauteur;
+    ul
+    {
+        margin-top: $entete_contact_margin;
+        margin-right: $entete_contact_margin;
+    }
+    a
+    {
+    }
+    i
+    {
+        font-size: $entete_contact_font_size;
+        color: $entete_contact_font_color;
+        font-style: $entete_contact_font_style;
+    }
+}
+
+nav
+{
+    background-image: $menu_background_image;
+    background-position: $menu_background_position;
+    background-repeat: $menu_background_repeat;
+}
+
+.top-bar
+{
+    background-image: $menu_background_image;
+
+}
+
+.top-bar-container
+{
+    background-image: $menu_background_image;
+    margin-bottom: $menu_margin;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) 
+{
+    background-image: $menu_background_image;
+}
+// Sidebar
+
+// Footer
+.separateur
+{
+    border: $separateur_border;
+    border-color: $separateur_border_color;
+    margin-bottom: $separateur_margin;
+}
+
+footer
+{
+    margin-top: $footer_margin;
+    background-color: $footer_background_color;
+    font-family: $footer_font_family;
+    font-weight: $footer_font_weight;
+    color: $footer_font_color;
+
+    ul
+    {
+        margin-top: $footer_margin;
+    }
+}
+
+
+footer h1, footer h2, footer h3, footer h4, footer h5, footer h6
+{
+    color: $footer_h_font_color;
+    text-transform: $footer_h_text_transform;
+    padding-top: $footer_h_padding;
+}
+
+footer a
+{
+    color: $footer_font_color;
+    font-size: $footer_font_size;
+}
+
+#copyright   
+{
+    line-height: 1;
+    color:#888888;
+    font-size: 12px;
+    font-style: italic;
+}
+
+#vers_haut
+{
+    background: $vers_haut_background;
+	cursor: pointer; 
+	width: $vers_haut_width;
+	display:block;  
+	float: right; 
+}
+
+
 
 
 /**
@@ -48,12 +182,97 @@
  * ----------------------------------------------------------------------------
  */
 
+    /**
+     * Body
+     * ------------------------------------
+     */
+    body
+    {
+        font-family: $body_font_familly;
+        font-size: $body_font_size;
+        line-height: $body_line_height;
+        color: $body_font_color;
+        background: $body_background_color $body_background_image;
 
-	/**
+    }
+
+    /**
+     * h1, h2,.... 
+     *--------------------------------------
+     */
+    h3, h4
+    {
+        color: $nl_bleu;
+    }
+
+    .panel h1, .panel h2, .panel h3
+    {
+        color: $nl_bleu;
+    }
+
+     /**
 	 * 4.1 Pages
 	 * ------------------------------------
 	 */
+    
+     // localisation
+     .accordion .content.active 
+     {
+         margin-bottom: $localisation_accordion_margin;
+     }
+     .tabs
+     {
+         width: $localisation_tabs_width;
+         margin-left: auto;
+         margin-right: auto;
 
+         dd > a
+         {
+            color: $nl_bleu;
+            text-transform: uppercase;
+            font-weight: bold;
+         }
+
+     }
+     
+    .tabs dd.active a 
+    {
+         background-color: $nl_blanc_casse;
+     }
+
+     .tabs-content > .content.active
+     {
+         background-color: $nl_blanc_casse;
+         p, ul
+         {
+             padding-left: $localisation_content_padding;
+         }
+     }
+
+     #choix_depart
+     {
+        margin-left: $localisation_choix_margin;
+        margin-top: $localisation_choix_margin;
+     }
+
+     #localisation_distances
+     {
+         width: $localisation_distances_width;
+         height: $localisation_distances_height;
+     }
+
+     // Appartements
+     li.clearing-featured-img
+     {
+         height: $appartement_width;
+     }
+     .clearing-featured-img a img
+     {
+         padding-top: $appartement_padding;
+         width: $appartement_img_width;
+         height: $appartement_img_height;
+         max-width: none;
+     }
 	 // Hero
 
 	#homepage-hero {

@@ -2,3 +2,90 @@
  * Custom variables
  * ----------------------------------------------------------------------------
  */
+
+// body
+$body_font_color: #444;
+$body_font_familly: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+$body_font_size: 13px;
+$body_line_height: 1.4;
+
+$body_background_color: $nl_fond; 
+$body_background_image: url( 'assets/img/background.png' );
+
+// entete_contact
+$entete_contact_hauteur: 49px;
+
+$entete_contact_margin: 7px;
+
+$entete_contact_font_familly: 'Arial';
+$entete_contact_font_size: 12px;
+$entete_contact_font_color: $nl_blanc;
+$entete_contact_ligne_height: 1.2;
+$entete_contact_font_style: italic;
+
+$entete_contact_background_image: url( '../assets/img/header-top.png' ); 
+$entete_contact_background_position:bottom left; 
+$entete_contact_background_repeat: repeat-x; 
+$entete_contact_background_color: $nl_gris;
+$entete_contact_padding: 8px 0 0 0px;
+$entete_contact_background_color: $nl_gris;
+
+// menu
+$menu_hauteur: 80px;
+$menu_background_image: url( '../assets/img/header-bg.png' );
+$menu_background_position: bottom left;
+$menu_background_repeat: repeat-x;
+$menu_margin: 65px;
+// $menu_background_color; ds setting topbar
+
+// slider 
+$slider_size: 450px;
+$slider_padding: 15px;
+
+// panel
+$panel_margin : 50px;
+
+// panel callout
+$panel_callout_margin : 45px;
+
+// panel callout ( slogan )
+$panel_callout_font_family: $body_font_familly;
+$panel_callout_font_size: 28px;
+$panel_callout_border_color: $nl_gris;
+
+// separateur
+$separateur_border: 1px solid;
+$separateur_border_color: $nl_separateur;
+$separateur_margin: 15px;
+
+// footer
+$footer_margin: 30px;
+$footer_background_color: $nl_footer;
+$footer_font_family: 'Pt Sans', sans-serif;
+$footer_font_weight: bold;
+$footer_font_color: $nl_blanc;
+$footer_font_size: 14px;
+
+$footer_h_font_color: $nl_blanc;
+$footer_h_text_transform: uppercase;
+$footer_h_padding: 10px;
+
+// vers haut
+$vers_haut_background: url(images/back-to-top.png) 0px -12px no-repeat;
+$vers_haut_width: 62px;
+
+
+// localisation
+$localisation_accordion_margin: 25px;
+$localisation_tabs_width: 650px;
+$localisation_choix_margin: 15px;
+
+$localisation_distances_height: 100px;
+$localisation_distances_width: 100%;
+$localisation_content_padding: 25px;
+
+// appartement
+$appartement_padding: 10px;
+$appartement_width: 170px;
+$appartement_img_width: 160px;
+$appartement_img_height: 160px;

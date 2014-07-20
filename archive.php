@@ -2,7 +2,7 @@
 <div class="row">
 <!-- Row for main content area -->
 	<div class="small-12 large-8 columns" role="main">
-	
+	<h1> Archives </h1>
 	<?php if ( have_posts() ) : ?>
 	
 		<?php /* Start the Loop */ ?>
