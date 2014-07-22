@@ -30,6 +30,11 @@
 .panel
 {
     margin-bottom: $panel_margin;
+
+    h1, h2, h3, h4
+    {
+        color: $nl_bleu;
+    }
 }
 
 // panel callout
@@ -216,6 +221,13 @@ footer a
 	 */
     
      // localisation
+     #map-canvas // impossible a foutre se putain de zoom google 
+     {
+         img 
+         {
+            max-width: none;
+         }
+     }
      .accordion .content.active 
      {
          margin-bottom: $localisation_accordion_margin;
@@ -262,17 +274,7 @@ footer a
      }
 
      // Appartements
-     li.clearing-featured-img
-     {
-         height: $appartement_width;
-     }
-     .clearing-featured-img a img
-     {
-         padding-top: $appartement_padding;
-         width: $appartement_img_width;
-         height: $appartement_img_height;
-         max-width: none;
-     }
+
 	 // Hero
 
 	#homepage-hero {

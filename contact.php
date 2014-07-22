@@ -100,47 +100,55 @@ if( array_key_exists( 'envoi_mail', $_REQUEST ) )
             // envoi mail
             if( $mail_contact && $message )
             {
-            // Create the Transport
-           // $transport = Swift_SmtpTransport::newInstance('smtp.agiweb.be', 587)
-            //  ->setUsername('infos@agiweb.be')
-            //  ->setPassword('njk23+ml');
-            $transport = Swift_SmtpTransport::newInstance( 'smtp.gmail.com', 465, 'ssl' )
-              ->setUsername('nealoca@gmail.com')
-              ->setPassword('nealoca00');
+                try
+                {
+                    //error_reporting(0);
 
-            // Create the Mailer using your created Transport
-            $mailer = Swift_Mailer::newInstance($transport);
+                    // Create the Transport
+                    $transport = Swift_SmtpTransport::newInstance( 'smtp.gmail.com', 465, 'ssl' )
+                        ->setUsername('nealoca@gmail.com')
+                        ->setPassword('nealoca00');
 
-            // Create the message
-            $message_a_envoyer = Swift_Message::newInstance()
+                    // Create the Mailer using your created Transport
+                    $mailer = Swift_Mailer::newInstance($transport);
 
-              // Give the message a subject
-              ->setSubject( $sujet )
+                    // Create the message
+                    $message_a_envoyer = Swift_Message::newInstance()
 
-              // Set the From address with an associative array
-              ->setFrom(array( $mail_contact => $mail_contact ) )
+                        // Give the message a subject
+                        ->setSubject( $sujet )
 
-              // Set the To addresses with an associative array
-              ->setTo(array('nealoca@gmail.com' => 'nealoca'))
-              ->setTo(array( $post_contact->email_contact => $post_contact->nom_contact ))
+                        // Set the From address with an associative array
+                        ->setFrom(array( $mail_contact => $mail_contact ) )
 
-              // Give it a body
-              ->setBody( $message . $infos );
+                        // Set the To addresses with an associative array
+                        ->setTo(array('nealoca@gmail.com' => 'nealoca'))
+                        ->setTo(array( $post_contact->email_contact => $post_contact->nom_contact ))
 
-            // Send the message
-            $result = $mailer->send($message_a_envoyer);
+                        // Give it a body
+                        ->setBody( $message . $infos );
 
-            $message = "<div data-alert class='alert-box success radius'>
-                Mail Envoyer, Merci
-                <a href='#' class='close'>&times;</a>
-                </div>";
+                    // Send the message
+                    $result = $mailer->send($message_a_envoyer, $failures);
+
+
+                    $message = "<div data-alert class='alert-box success radius'>
+                        Mail Envoyer, Merci
+                        <a href='#' class='close'>&times;</a>
+                        </div>";
+                } catch (Exception $e) {
+                    $message = "<div data-alert class='alert-box warning radius'>
+                        !Erreur lors de l'envoi! 
+                        <a href='#' class='close'>&times;</a>
+                        </div>";
+                }
             }
             else
             {
-            $message = "<div data-alert class='alert-box warning radius'>
-                !Erreur lors de l'envoi! 
-                <a href='#' class='close'>&times;</a>
-                </div>";
+                $message = "<div data-alert class='alert-box warning radius'>
+                    !Erreur lors de l'envoi! 
+                    <a href='#' class='close'>&times;</a>
+                    </div>";
             }
         }
     }

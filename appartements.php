@@ -30,7 +30,7 @@ Template Name: Appartements
                         <div class="panel">
                             <div class='row'>
                                 <div class='small-3 large-3 columns'>
-                                    <ul class="small-block-grid-2 large-block-grid-3 clearing-thumbs clearing-feature" data-clearing>
+                                    <ul class="clearing-thumbs clearing-feature" data-clearing>
                                          <?php if( $post_appartement->has_gallerie() ): $y = true; foreach( $post_appartement->gallerie as $id ) :?>
                                                 <?php if( $y ) :  $y = false;?>
                                                      <li class="clearing-featured-img "> <a href="<?php echo wp_get_attachment_url( $id ); ?>" class='appartement_img'><?php echo wp_get_attachment_image( $id, 'thumbnail' ); ?></a></li>

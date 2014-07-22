@@ -10,7 +10,7 @@ $body_font_size: 13px;
 $body_line_height: 1.4;
 
 $body_background_color: $nl_fond; 
-$body_background_image: url( 'assets/img/background.png' );
+$body_background_image: url( '../assets/img/background.png' );
 
 // entete_contact
 $entete_contact_hauteur: 49px;
@@ -71,7 +71,7 @@ $footer_h_text_transform: uppercase;
 $footer_h_padding: 10px;
 
 // vers haut
-$vers_haut_background: url(images/back-to-top.png) 0px -12px no-repeat;
+$vers_haut_background: url('../assets/img/back-to-top.png) 0px -12px no-repeat;
 $vers_haut_width: 62px;
 
 
